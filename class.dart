@@ -45,6 +45,20 @@ class Coordinate implements Point{
 
 }
 
+class RunMan{
+
+  void run() => print('run..');
+}
+
+class FlyMan{
+
+  void fly() => print('fly..');
+}
+
+class SuperMan with RunMan,FlyMan{
+
+}
+
 main() {
   Point p = Point(1, 2);
   p.printInfo();
@@ -64,5 +78,9 @@ main() {
 
   print(v is Point);
   print(coordinate is Point);
+
+  SuperMan superMan = SuperMan();
+  superMan.run();
+  superMan.fly();
 }
 
